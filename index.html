@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bienvenida</title>
+  </head>
+  <body>
+    <script>
+      // Datos personales al azar
+      let nombre = "Gennaro";
+      let apellido = "Ferreyra";
+      let ciudad = "Corrientes";
+
+      /*
+      // Pedir los datos al usuario
+      let nombre = prompt("Ingrese su nombre:");
+      let apellido = prompt("Ingrese su apellido:");
+      let ciudad = prompt("Ingrese su ciudad:");
+      */
+
+      // Mensaje de bienvenida al cargar la página
+      alert(
+        "¡Bienvenido a mi sitio, yo soy " +
+          nombre +
+          " " +
+          apellido +
+          " de " +
+          ciudad +
+          "!"
+      );
+
+      // Pedir fecha de nacimiento (en formato yyyy-mm-dd)
+      let fechaNacimientoStr = prompt(
+        "Ingrese su fecha de nacimiento (formato AAAA-MM-DD):"
+      );
+
+      // Crear objetos de fecha
+      let fechaNacimiento = new Date(fechaNacimientoStr);
+      let hoy = new Date();
+
+      // Calcular diferencia en milisegundos y convertir a días
+      let diferenciaMS = hoy - fechaNacimiento;
+      let diasVividos = Math.floor(diferenciaMS / (1000 * 60 * 60 * 24));
+
+      // Mostrar resultado
+      alert("Has vivido aproximadamente " + diasVividos + " días.");
+    </script>
+  </body>
+</html>
